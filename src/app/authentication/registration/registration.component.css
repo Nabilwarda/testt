@@ -1,0 +1,124 @@
+.Register-Landing {
+    background-color: #F5F5F5;
+}
+
+.register-Header {
+    color: #2B2C6C;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.Register-Paragraph {
+    color: #2B2C6C;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.input-icon {
+    width: 75%;
+    border-radius: 22px;
+    padding: 0.7em;
+    background-color: white;
+    display: flex;
+    align-items: center;
+
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 15px;
+    border: none;
+    outline-style: none;
+}
+
+.input-img {
+    margin-right: 10px;
+    height: 24px;
+    width: 24px;
+}
+
+.form-control {
+    flex-grow: 1;
+    padding-left: 35px;
+}
+
+[dir="rtl"] .input-img {
+    margin-right: 0;
+    margin-left: 10px;
+}
+
+.forget-Text {
+    color: #021331;
+}
+
+.Login-btn {
+    background-color: #52B2DB;
+    color: white;
+    width: 75%;
+    border-radius: 22px;
+    padding: 12px;
+}
+
+.divider-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    width: 75%;
+}
+
+.divider-line {
+    height: 1px;
+    width: 40%;
+    background-color: #021331;
+    margin: 0 10px;
+}
+
+.divider-text {
+    font-size: 16px;
+    color: #021331;
+    white-space: nowrap;
+    padding: 0 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.divider-text {
+    font-family: 'Amiri', serif;
+}
+
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+    width: 75%;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .social-button {
+    border: 2px solid #52B2DB; 
+    background-color: #FFFFFF; 
+    color: #52B2DB; 
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+    text-align: center;
+    justify-content: center;
+  }
+  
+  .social-button img {
+    width: 20px; 
+  }
+  @media (max-width: 767px) {
+    .hide-on-small-screens {
+        display: none;
+    }
+}

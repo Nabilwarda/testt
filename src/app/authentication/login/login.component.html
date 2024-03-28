@@ -1,0 +1,52 @@
+<div class="container-fluid Login-Landing">
+  <div class="container py-5">
+    <div class="row w-100">
+      <div class="login-form col-md-6 was-validated">
+        <div class="Header">
+          <h3 class="register-Header">تسجيل الدخول</h3>
+          <p class="Register-Paragraph py-4">مرحبًا بك، يرجى وضع بيانات اعتماد تسجيل الدخول أدناه لبدء استخدام الموقع
+          </p>
+        </div>
+        <form #loginForm="ngForm" (ngSubmit)="onLogin(loginForm)">
+
+          <div class="form-group input-icon col-lg-12 d-flex ">
+
+            <img src="../../../assets/image/Login/Ellipse.png" alt="Email Icon" class="input-img">
+            <input type="email" name="email" [(ngModel)]="email" required email #emailField="ngModel"
+              class="form-control border-0 " placeholder="البريد الإلكتروني">
+
+          </div>
+          <div class="text-danger mb-2 "
+            *ngIf="emailField.errors?.['required'] && (emailField.dirty || emailField.touched)">
+            برجاء إدخال البريد الإلكتروني !!
+          </div>
+          <div class="text-danger mb-2"
+            *ngIf="emailField.errors?.['email'] && (emailField.dirty || emailField.touched)">
+            برجاء إدخال بريد إلكتروني صالح !!
+          </div>
+          <div class="form-group input-icon col-lg-12 mt-3 ">
+            <img src="../../../assets/image/Login/Lock.png" alt="Lock Icon" class="input-img">
+            <input type="password" name="password" [(ngModel)]="password" required #passwordField="ngModel"
+              class="form-control border-0" placeholder="كلمة السر">
+
+          </div>
+          <div class="text-danger mb-2"
+            *ngIf="passwordField.errors?.['required'] && (passwordField.dirty || passwordField.touched)">
+            برجاء إدخال كلمة السر !!
+          </div>
+          <div class="forget-Pass my-3">
+            <a class="forget-Text" routerLink="/forgetPassword">هل نسيت كلمة السر؟</a>
+          </div>
+
+          <div class="col-lg-12 d-flex">
+            <button type="submit" class="btn Login-btn">تسجيل الدخول</button>
+          </div>
+
+        </form>
+      </div>
+      <div class="col-md-6 justify-content-end d-flex">
+        <img class="w-75 hide-on-small-screens" src="../../../assets/image/Rectangle.png" alt="decorative">
+      </div>
+    </div>
+  </div>
+</div>

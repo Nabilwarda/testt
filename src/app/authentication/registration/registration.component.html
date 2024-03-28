@@ -1,0 +1,75 @@
+<div class="container-fluid Register-Landing">
+  <div class="container py-5">
+    <div class="row w-100">
+      <div class="login-form col-md-6 was-validated">
+        <div class="Header">
+          <h3 class="register-Header">انشاء حساب جديد</h3>
+          <p class="Register-Paragraph py-4">احصل على الميزات الحصرية عن طريق إنشاء حساب</p>
+        </div>
+        <form #registrationForm="ngForm" (ngSubmit)="onSignUp(registrationForm)">
+          <div class="form-group input-icon col-lg-12 ">
+            <img src="../../../assets/image/registration/username.png" alt="User Icon" class="input-img">
+            <input type="text" name="username" ngModel required #username="ngModel" class="form-control border-0"
+              placeholder="الاسم بالكامل">
+          </div>
+
+          <div class="form-group input-icon col-lg-12">
+            <img src="../../../assets/image/registration/Ellipse.png" alt="Email Icon" class="input-img">
+            <input type="email" name="email" ngModel required email #emailField="ngModel" class="form-control border-0"
+              placeholder="البريد الإلكتروني">
+
+          </div>
+          <div class="text-danger mb-2 "
+            *ngIf="emailField.errors?.['required'] && (emailField.dirty || emailField.touched)"
+            class="text-danger mb-2">
+            برجاء إدخال البريد الإلكتروني !!
+          </div>
+          <div class="text-danger mb-2"
+            *ngIf="emailField.errors?.['email'] && (emailField.dirty || emailField.touched)">
+            برجاء إدخال بريد إلكتروني صالح !!
+          </div>
+          <div class="form-group input-icon col-lg-12">
+            <img src="../../../assets/image/registration/Lock.png" alt="Lock Icon" class="input-img">
+            <input type="password" name="password" ngModel required #password="ngModel" class="form-control border-0"
+              placeholder="كلمة السر">
+
+          </div>
+          <div class="text-danger mb-2 " *ngIf="password.errors?.['required'] && (password.dirty || password.touched)">
+            برجاء إدخال كلمة السر !!
+          </div>
+          <div class="form-group input-icon col-lg-12">
+            <img src="../../../assets/image/registration/Lock.png" alt="Confirm Password Icon" class="input-img">
+            <input type="password" name="confirmPassword" ngModel required #confirmPassword="ngModel"
+              class="form-control border-0" placeholder="تأكيد كلمة السر">
+          </div>
+          <div class="text-danger mb-2 " *ngIf="passwordError" class="text-danger mb-2">
+            كلمة السر غير متطابقة
+          </div>
+
+          <div class="col-lg-12 d-flex">
+            <button type="submit" class="btn Login-btn">انشاء حساب جديد</button>
+          </div>
+        </form>
+        <div class="divider-container col-lg-12">
+          <div class="divider-line"></div>
+          <span class="divider-text">أو تسجيل الدخول عبر</span>
+          <div class="divider-line"></div>
+        </div>
+        <div class="button-container">
+          <button class="social-button google" type="button">
+            <img src="../../../assets/image/Login/Gmail.png" alt="Google"> Google
+          </button>
+          <button class="social-button facebook" type="button">
+            <img src="../../../assets/image/Login/facebook.png" alt="Facebook"> Facebook
+          </button>
+          <button class="social-button custom" type="button" routerLink="../login">
+            العودة لتسجيل الدخول
+          </button>
+        </div>
+      </div>
+      <div class="col-md-6 justify-content-end d-flex align-items-center">
+        <img class="w-75 hide-on-small-screens" src="../../../assets/image/Rectangle.png" alt="Decorative">
+      </div>
+    </div>
+  </div>
+</div>
